@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILEV -E -o c
+gcc -E $CFILE -o c
