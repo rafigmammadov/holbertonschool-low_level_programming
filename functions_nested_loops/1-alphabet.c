@@ -4,7 +4,7 @@
  * main - Function that prints the alphabet,
  * in lowercase, followed by a new line.
  *
- * Return: Always returns 0
+ * Return: void
  *
  */
 
