@@ -16,7 +16,7 @@ int main(void)
 	int nextterm;
 	long sum;
 
-	while (term1 <= 40000000)
+	while (term1 <= 4000000)
 	{
 		if (term1 % 2 == 0)
 		{
