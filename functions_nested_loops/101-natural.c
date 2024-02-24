@@ -1,26 +1,30 @@
 #include <stdio.h>
 
 /**
- * natural - Function that computes and prints the sum of all the multiples
+ * main - Function that computes and prints the sum of all the multiples
  * of 3 or 5 below 1024 (excluded), followed by a new line.
  *
- * Return: Returns no result
+ * Return: Always returns 0
  *
  */
 
-void natural(void)
+int main(void)
 {
 	int i = 0;
-	int sum;
+	int sum = 0;
 
 	while (i < 1024)
 	{
-		if (i % 3 == 0 || i % 5 == 0)
+		if ((i % 3) == 0 || (i % 5) == 0)
 		{
 			sum += i;
 		}
 	i++;
 	}
+
 	printf("%d", sum);
+
 	putchar('\n');
+
+	return (0);
 }
