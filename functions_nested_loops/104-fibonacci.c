@@ -11,23 +11,26 @@
 
 int main(void)
 {
-	int i;
-	unsigned long fib[98];
+	unsigned int count = 0;
+	unsigned long int a, b, c;
 
-	fib[0] = 1;
-	fib[1] = 2;
+	a = 1;
+	b = 2;
 
-	for (i = 2; i < 98; i++)
+	printf("%lu, %lu, ", a, b);
+
+	while (count < 96)
 	{
-		fib[i] = fib[i - 1] + fib[i - 2];
+		c = a + b;
+		a = b;
+		b = c;
+
+		printf("%lu, ", c);
+
+		count++;
 	}
 
-	for (i = 0; i < 97; i++)
-	{
-		printf("%lu, ", fib[i]);
-	}
-
-	printf("%lu\n", fib[97]);
+	printf("\n");
 
 	return (0);
 }
