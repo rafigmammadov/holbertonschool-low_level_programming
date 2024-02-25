@@ -9,53 +9,32 @@
  *
  */
 
-#include <stdio.h>
 
-int main(void)
-{
+int main(void) {
+	unsigned long int front1 = 0, back1 = 1, front2 = 0, back2 = 2;
+	unsigned long int temp1, temp2, temp3;
 	int count;
-	unsigned long currentFib1 = 0, currentFib2 = 1, sum;
-	unsigned long currentHalf1, currentHalf2, nextHalf1, nextHalf2;
-	unsigned long half1, half2;
 
+	printf("%lu, %lu, ", back1, back2);
 
-	for (count = 0; count < 92; count++)
-	{
-		sum = currentFib1 + currentFib2;
-		printf("%lu, ", sum);
+	for (count = 2; count < 98; count++) {
+		if (back1 + back2 > 10000000000 || front2 > 0 || front1 > 0) {
+			temp1 = (back1 + back2) / 10000000000;
+			temp2 = (back1 + back2) % 10000000000;
+			temp3 = front1 + front2 + temp1;
+			front1 = front2, front2 = temp3;
+			back1 = back2, back2 = temp2;
+			printf("%lu%010lu", front2, back2);
+		} else {
+			temp2 = back1 + back2;
+			back1 = back2, back2 = temp2;
+			printf("%lu", back2);
+		}
 
-		currentFib1 = currentFib2;
-		currentFib2 = sum;
+		if (count != 97)
+			printf(", ");
 	}
 
-	currentHalf1 = currentFib1 / 10000000000;
-	currentHalf2 = currentFib2 / 10000000000;
-	nextHalf1 = currentFib1 % 10000000000;
-	nextHalf2 = currentFib2 % 10000000000;
-
-
-	for (count = 93; count < 99; count++)
-	{
-		half1 = currentHalf1 + nextHalf1;
-		half2 = currentHalf2 + nextHalf2;
-
-		if (nextHalf2 > 9999999999)
-		{
-			half1 += 1;
-			half2 %= 10000000000;
-        	}
-
-	printf("%lu%lu", half1, half2);
-
-	if (count != 98)
-		printf(", ");
-
-	currentHalf1 = nextHalf1;
-	currentHalf2 = nextHalf2;
-	nextHalf1 = half1;
-	nextHalf2 = half2;
-}
-
 	printf("\n");
-	return 0;
+	return (0);
 }
