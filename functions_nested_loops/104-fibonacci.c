@@ -25,6 +25,12 @@ int main(void)
 		a = b;
 		b = c;
 
+		if (count == 95)
+		{
+		    printf("%lu", c);
+		    break;
+		}		
+
 		printf("%lu, ", c);
 
 		count++;
