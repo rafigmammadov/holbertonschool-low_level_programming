@@ -4,8 +4,7 @@
 /**
  *main - Function that prints to the standart error
  *
- * You are not allowed to use any functions listed in the NAME section of
- * the man (3) printf or man (3) puts.
+ * You are not allowed to use any functions listed in the NAME section
  * Your program should return 1
  * Your program should compile without any warnings
  * when using the -Wall gcc option
