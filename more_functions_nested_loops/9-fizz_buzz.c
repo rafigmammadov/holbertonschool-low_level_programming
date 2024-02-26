@@ -30,7 +30,7 @@ int main(void)
 			{
 				printf("Buzz ");
 			}
-			
+
 			else
 			{
 				printf("Buzz");
@@ -51,6 +51,6 @@ int main(void)
 	}
 
 	putchar('\n');
-	
+
 	return (0);
 }
