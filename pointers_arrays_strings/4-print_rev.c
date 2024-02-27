@@ -22,7 +22,7 @@ void print_rev(char *s)
 		len += 1;
 		i += 1;
 	}
-	for (j = len; j >= 0; j--)
+	for (j = len - 1; j >= 0; j--)
 	{
 		write(1, &s[j], 1);
 	}
