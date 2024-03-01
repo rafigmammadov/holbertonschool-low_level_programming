@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
  * _strncat - concatenates two strings with a specified limit
  *
