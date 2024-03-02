@@ -12,24 +12,32 @@
 
 char *cap_string(char *s)
 {
-	int i;
-	int j;
-	int separators[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	for (i = 0; s[i] != '\0'; i++)
+	int idx = 0;
+	int sep_idx = 0;
+	char separators[] = {' ', '\n', '\t', ',', ';', '.',
+		'!', '?', '"', '(', ')', '{', '}'};
+
+	for (idx = 0; s[idx] != '\0'; idx++)
 	{
-		for (j = 0; j <= 12; j++)
+		sep_idx = 0;
+		while (separators[sep_idx] != '\0')
 		{
-			if (s[i] == separators[j])
+			if (s[0] >= 'a' && s[0] <= 'z')
 			{
-				if (s[i + 1] >= 97 && s[i + 1] <= 122)
-				{
-					s[i + 1] -= 32;
-					break;
-				}
+				s[0] = s[0] - 32;
+				idx++;
 			}
+
+			if (s[idx] == separators[sep_idx] && (s[idx + 1] >= 'a'
+					&& s[idx + 1] <= 'z'))
+			{
+				s[idx + 1] = s[idx + 1] - 32;
+			}
+			sep_idx++;
 		}
 	}
 
 	return (s);
 }
+
