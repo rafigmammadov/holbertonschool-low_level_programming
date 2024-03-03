@@ -44,10 +44,8 @@ void print_buffer(char *b, int size)
 			else
 				printf(".");
 		}
-
-		if (i + j == size && j % 2 == 1)
+		if (i + j == size && j % 2 == 0)
 			printf(" ");
-
 		printf("\n");
 	}
 }
