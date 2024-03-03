@@ -25,9 +25,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int j;
 	int k;
 
-	int max_len = (len1 > len2) ? len1 : len2;
-
-	if (max_len + 1 > size_r)
+	if (len1 > size_r - 2 || len2 > size_r - 2)
 	{
 		return (0);
 	}
