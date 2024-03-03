@@ -4,7 +4,7 @@
  * main - Function that finds and prints the largest prime factor of
  * the number 612852475143, followed by a new line.
  *
- * Return: Returns the number.
+ * Return: Always returns 0
  *
  *
  */
@@ -25,5 +25,5 @@ int main(void)
 
 	printf("%ld\n", i);
 
-	return (i);
+	return (0);
 }
