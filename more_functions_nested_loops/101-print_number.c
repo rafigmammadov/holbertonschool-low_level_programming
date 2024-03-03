@@ -12,17 +12,29 @@
 
 void print_number(int n)
 {
+	unsigned int absolute, divisor, poweroften;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		absolute = -n;
 	}
-
-	if (n / 10 != 0)
+	else
 	{
-		print_number(n / 10);
+		absolute = n;
 	}
 
-	_putchar(n % 10 + '0');
-}
+	divisor = absolute;
+	poweroften = 1;
 
+	while (divisor > 9)
+	{
+		divisor /= 10;
+		poweroften *= 10;
+	}
+
+	for (; poweroften >= 1; poweroften /= 10)
+	{
+		_putchar(((absolute / poweroften) % 10) + '0');
+	}
+}
