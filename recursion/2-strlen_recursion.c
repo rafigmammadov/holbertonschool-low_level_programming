@@ -5,6 +5,9 @@
  *
  * @s: The parameter that represents string
  *
+ * Return: Returns the length of the string
+ *
+ *
  */
 
 int _strlen_recursion(char *s)
