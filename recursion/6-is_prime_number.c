@@ -11,9 +11,6 @@
  *
  */
 
-int is_prime_number(int n);
-int _isprime(unsigned int num, unsigned int operand);
-
 int _isprime(unsigned int num, unsigned int operand)
 {
 	if (num % operand == 0)
