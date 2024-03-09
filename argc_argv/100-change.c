@@ -17,7 +17,7 @@
 int main(int argc, char *argv[])
 {
 	int cents = 0;
-	int numebr_of_coins = 0;
+	int number_of_coins = 0;
 
 	if (argc != 2)
 	{
