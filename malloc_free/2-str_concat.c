@@ -49,7 +49,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0;
 
 	size = _strlen(s1) + _strlen(s2);
-	array = malloc(sizeof(char) * size);
+	array = malloc(sizeof(char) * size + 2);
 
 	if (array == NULL)
 	{
@@ -78,6 +78,8 @@ char *str_concat(char *s1, char *s2)
 
 		i++;
 	}
+
+	*(array + i) = '\0';
 
 	return (array);
 }
