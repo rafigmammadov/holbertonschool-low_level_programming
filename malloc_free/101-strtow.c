@@ -1,13 +1,18 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
- * free_grid - frees a 2-dimensional array of characters.
- * @grid: 2D array to free
- * @height: height of the array
+ * free_grid - Function that frees the 2-dimensional array of characters
  *
- * Return: no return
+ * @grid: The parameter that represents 2D array to free
+ * @height: The parameter that represents height of the array
+ *
+ * Return: Returns no value
+ *
+ *
  */
+
+
 void free_grid(char **grid, unsigned int height)
 {
 	if (grid != NULL && height != 0)
@@ -20,11 +25,16 @@ void free_grid(char **grid, unsigned int height)
 }
 
 /**
- * strtow - splits a string into words.
- * @str: input string
+ * strtow - Function that splits a string into words.
+ *
+ * @str: The parameter that represents input string
  *
  * Return: pointer to an array of strings
+ *
+ *
  */
+
+
 char **strtow(char *str)
 {
 	char **output;
