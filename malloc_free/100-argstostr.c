@@ -21,27 +21,34 @@ char *argstostr(int ac, char **av)
 	int current_position = 0;
 
 	if (ac == 0 || av == NULL)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i < ac; i++)
 	{
-		length += strlen(av[i]) + 1;
+		char *arg = av[i];
+
+		while (*arg)
+		{
+			length++;
+			arg++;
+		}
+
+		length++;
 	}
 
 	array = (char *)malloc((length + 1) * sizeof(char));
 
 	if (array == NULL)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i < ac; i++)
 	{
-		strcpy(array + current_position, av[i]);
-		current_position += strlen(av[i]);
-		array[current_position++] = '\n';
+		char *arg = av[i];
+
+		while (*arg)
+			array[current_position++] = *arg++;
+
+		array[current_position] = '\n';
 	}
 
 	array[current_position] = '\0';
