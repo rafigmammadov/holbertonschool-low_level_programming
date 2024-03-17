@@ -25,7 +25,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		length += strlen(av[i]) + 1;
 	}
@@ -37,7 +37,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		strcpy(array + current_position, av[i]);
 		current_position += strlen(av[i]);
