@@ -16,7 +16,7 @@
 char *argstostr(int ac, char **av)
 {
 	int i;
-	int length;
+	int length = 0;
 	char *array;
 	int current_position;
 
