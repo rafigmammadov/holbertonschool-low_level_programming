@@ -48,7 +48,7 @@ char *argstostr(int ac, char **av)
 		while (*arg)
 			array[current_position++] = *arg++;
 
-		array[current_position] = '\n';
+		array[current_position++] = '\n';
 	}
 
 	array[current_position] = '\0';
