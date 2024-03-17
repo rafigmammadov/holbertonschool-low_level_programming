@@ -68,7 +68,7 @@ char **strtow(char *str)
 				break;
 			}
 		}
-		for (j = 0; a <= j; a++, j++)
+		for (j = 0;  str[a] != ' ' && str[a] != '\0'; a++, j++)
 			output[i][j] = str[a];
 		output[i][j] = '\0';
 	}
