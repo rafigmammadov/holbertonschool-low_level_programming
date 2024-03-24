@@ -31,8 +31,8 @@ int main(int argc, char **argv)
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	if (*arg != '+' && *arg != '-' && *arg != '*' && *arg != '/' && *arg != '%' &&
-			strlen(arg) > 1)
+	if ((*arg != '+' && *arg != '-' && *arg != '*' && *arg != '/' && *arg != '%')
+			|| strlen(arg) != 1)
 	{
 		printf("Error\n");
 		exit(99);
