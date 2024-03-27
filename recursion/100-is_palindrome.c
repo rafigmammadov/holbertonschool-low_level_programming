@@ -44,7 +44,7 @@ int palindrome_checker(char *str, int end, int start)
 
 	if (str[end] == str[start])
 	{
-		return (0);
+		return (palindrome_checker(str, end - 1, start + 1));
 	}
 
 	return (0);
