@@ -52,10 +52,10 @@ int palindrome_checker(char *str, int end, int start)
 
 
 /**
- * recursive_call - Function that helps
+ * is_palindrome - Function that helps
  * to call palindrome_checker function recursively
  *
- * @str: The parameter that represents the string to be checked
+ * @s: The parameter that represents the string to be checked
  *
  * Return: Returns 1 if the string is a palindrome, otherwise 0
  *
@@ -63,10 +63,10 @@ int palindrome_checker(char *str, int end, int start)
  */
 
 
-int recursive_call(char *str)
+int is_palindrome(char *s)
 {
-	int end = _strlen_recursion(str);
+	int end = _strlen_recursion(s);
 	int start = 0;
 
-	return (palindrome_checker(str, end - 1, start));
+	return (palindrome_checker(s, end - 1, start));
 }
