@@ -30,6 +30,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	if (*head == NULL)
 	{
 		*head = temp;
+		return (temp);
 	}
 
 	iter = *head;
@@ -39,8 +40,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		iter = (*iter).next;
 	}
 
-	(*iter).next = temp;
 	(*temp).prev = iter;
+	(*iter).next = temp;
 
 	return (temp);
 }
