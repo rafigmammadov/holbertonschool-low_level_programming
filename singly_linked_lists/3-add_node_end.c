@@ -29,7 +29,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		;
 
 	(*temp).str = strdup(str);
-	(*temp).len = len;
+	(*temp).len = length;
 	(*temp).next = NULL;
 
 	iter = *head;
