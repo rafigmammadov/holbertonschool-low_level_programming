@@ -12,7 +12,7 @@
 
 int sum_dlistint(dlistint_t *head)
 {
-	dlistint *iter = head;
+	dlistint_t *iter = head;
 	unsigned int sum = 0;
 
 	if (iter == NULL)
