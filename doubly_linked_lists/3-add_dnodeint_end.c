@@ -32,7 +32,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		*head = temp;
 	}
 
-	*iter = *head;
+	iter = *head;
 
 	while ((*iter).next)
 	{
@@ -42,5 +42,5 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	(*iter).next = temp;
 	(*temp).prev = iter;
 
-	return (node);
+	return (temp);
 }
