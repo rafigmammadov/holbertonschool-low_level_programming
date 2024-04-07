@@ -14,21 +14,25 @@
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	dlistint_t *iter;
+	dlistint_t *iter = head;
 	unsigned int to_index = 0;
 
-	if (head == NULL)
+	if (iter == NULL)
 	{
 		return (NULL);
 	}
 
-	while (to_index != index + 1)
+	while (iter)
 	{
-		iter = head;
-		head = (*head).next;
+		if (to_index == index)
+		{
+			return (iter);
+		}
+
+		iter = (*iter).next;
 
 		to_index++;
 	}
 
-	return (iter);
+	return (NULL);
 }
