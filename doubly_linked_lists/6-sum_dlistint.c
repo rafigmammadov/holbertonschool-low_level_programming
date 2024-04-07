@@ -6,6 +6,8 @@
  *
  * @head: The parameter that represents head of the linked list
  *
+ * Return: Returns the sum of the linked list
+ *
  *
  */
 
